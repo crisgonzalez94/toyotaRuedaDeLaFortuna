@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Rueda Fortuna</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/loadingScreen.css">
+    <link rel="stylesheet" href="styles/loadingScreenResponsive.css">
+    
+  </head>
+  <body style="text-align: center">
+
+    <!--Esta imagen alertara cuando un usuario utilize de manera portrait la app-->
+    <div id="portraitAlert">
+      <img src="assets/portrairAlertIcon.svg" alt="">
+    </div>
+
+    <div id="loadingScreen">
+      <a href="#">
+        <img id="loadingScreenLogo" src="assets/logo.png" alt="">
+      </a>
+
+      <h1>¡BIENVENIDOS A TOYOTA CASH BASH!</h1>
+
+      <div id="loadingBarAndBtn">
+
+        <button id="loadingScreenBtn"></button>
+        
+        <div id="progressBarContainer">
+          <div id="progressBar"></div>
+        </div>
+
+      </div>
+      
+
+    </div>
+
+    <canvas id="unity-canvas"></canvas>
+
+
+    <script src="Build/rueda-fortuna.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/rueda-fortuna.data",
+        frameworkUrl: "Build/rueda-fortuna.framework.js",
+        codeUrl: "Build/rueda-fortuna.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Rueda-fortuna",
+        productVersion: "0.1",
+        //matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+
+    <!--Script que gestiona la portraitAlert-->
+    <script src="src/rotateScreen.js"></script>
+
+  </body>
+</html>

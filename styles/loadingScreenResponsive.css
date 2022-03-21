@@ -1,0 +1,57 @@
+/*Smartpones muy pequeños*/
+@media (max-height: 400px) {
+    #loadingScreenLogo{
+        width: 150px;
+    }
+    #loadingScreen h1{
+        font-size: 15px;
+    }
+    #loadingScreenBtn{
+        top: 20px;
+        left: calc(50% - 75px);
+        /*--------------------------------------------*/
+        width: 150px;
+        height: 100px;
+        background-size: 150px;
+    }
+    #progressBarContainer{
+        top: 30px;
+        left: calc(50% - 200px);
+        /*--------------------------------------*/
+        width: 400px;
+        height: 35px;
+    }
+    #progressBar{
+        width: 0%;
+        height: 36px;
+    }
+}
+
+@media (max-height: 450px) {
+    #loadingScreenLogo{
+        width: 250px;
+    }
+    #loadingScreen h1{
+        font-size: 32px;
+        margin-top: 0;
+    }
+    #loadingScreenBtn{
+        top: 20px;
+        left: calc(50% - 75px);
+        /*--------------------------------------------*/
+        width: 150px;
+        height: 100px;
+        background-size: 150px;
+    }
+    #progressBarContainer{
+        top: 50px;
+        left: calc(50% - 200px);
+        /*--------------------------------------*/
+        width: 400px;
+        height: 35px;
+    }
+    #progressBar{
+        width: 0%;
+        height: 36px;
+    }
+}

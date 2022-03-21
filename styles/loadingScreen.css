@@ -1,0 +1,78 @@
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*Fixed*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+#loadingScreen{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgb(255,82,112);
+    background: radial-gradient(circle, rgba(255,82,112,1) 0%, rgba(242,7,60,1) 64%, rgba(123,1,33,1) 100%);
+}
+
+#loadingScreenLogo{
+    width: 500px;
+}
+
+#loadingScreen h1{
+    margin-top: 45px;
+    color: white;
+    font-size: 45px;
+}
+
+    /*----------------------------------------------------------------------------------------------------------------------*/
+    /*Relative*/
+    /*----------------------------------------------------------------------------------------------------------------------*/
+    /*-------------------------------------------------------------------*/
+    /*Estas dos capas (loadingScreenBtn y progressBarContainer)*/
+    #loadingBarAndBtn{
+        position: relative;
+        width: 100%;    
+    }
+
+        /*----------------------------------------------------------------------------------------------------------------------*/
+        /*Absolute*/
+        /*----------------------------------------------------------------------------------------------------------------------*/
+        #loadingScreenBtn{
+            /*Estas son las settings para ubicarla igual que progressBarContainer*/
+            position: absolute;
+            top: 20px;
+            left: calc(50% - 115px);
+            /*--------------------------------------------*/
+
+            width: 230px;
+            height: 120px;
+            border: none;
+            background: url(../assets/ingresarBtn.png);
+            background-size: 230px;
+            background-repeat: no-repeat;
+        }
+
+        #progressBarContainer{
+            /*Estas son las settings para ubicarla igual que loadingScreenBtn*/
+            position: absolute;
+            top: 50px;
+            left: calc(50% - 300px);
+            /*--------------------------------------*/
+
+            width: 600px;
+            height: 40px;
+            border: 6px solid white;
+        }
+
+        #progressBar{
+            /*Este div se ocupara de estar dentro de progressBarContainer e ira aumentando el width hasta que*/
+            position: relative;
+            width: 0%;
+            background: white;
+            height: 40px;
+        }
+        /*----------------------------------------------------------------------------------------------------------------------*/
+        /*End Absolute*/
+        /*----------------------------------------------------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*End fixed*/
+/*----------------------------------------------------------------------------------------------------------------------*/
